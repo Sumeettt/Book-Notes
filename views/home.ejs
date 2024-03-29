@@ -6,7 +6,7 @@
     
     <% for(let book of locals.booksList) { %>
         <div class="each-book-container">
-            <img src="<%= book.book_cover_url %>" /> 
+            <img src="<%= book.book_cover_url %>" alt="book cover"/> 
             <div class="each-book-content-buttons-container">
                 <div>
                     <h1 class="book-author-text"> <%= book.book_title %> by <%= book.book_author %> </h1>
