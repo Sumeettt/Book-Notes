@@ -1,0 +1,147 @@
+@media screen and (max-width:768px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+body {
+    background-color: black;
+    color:white;
+    padding: 20px;
+    display: flex; 
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Sans-serif;
+}
+
+.main {
+    width: 50%;
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@media screen and (max-width:768px) {
+    .main {
+        width: 80%;
+    }
+}
+
+
+.my-name-text{
+    font-size: 3rem;
+    margin-bottom: 0px;
+    color:green;
+}
+
+.read-text{
+    font-size: 2rem;
+}
+
+hr{
+    width:100%;
+    margin-bottom: 3rem;
+}
+
+img {
+    height: 200px;
+    width:130px;
+    margin-right: 20px;
+}
+
+.each-book-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+}
+
+.each-book-content-buttons-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-delete-buttons-container {
+    display: flex;
+}
+
+@media screen and (max-width:768px) {
+    .each-book-container {
+        flex-direction: column;
+    }
+}
+
+.book-author-text {
+    font-size: 2.5rem;
+    color: green;
+    margin-top: 0px;
+}
+
+@media screen and (max-width:768px) {
+    .book-author-text {
+        margin-top: 3rem;
+    }
+}
+
+.summary-text {
+    font-size: 1rem;
+    
+    
+}
+
+.add-book-input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+}
+
+@media screen and (max-width:768px) {
+    .add-book-input {
+        width: 80%;
+    }
+}
+
+input {
+    height: 20px;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+textarea {
+    height: 250px;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+label {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid green; /* Primary color */
+    color: green; /* Primary color */
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.delete-button {
+    color:darkred;
+    border-color: darkred;
+    margin-left: 1rem;
+}
+
+.back-icon {
+    color: green;
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-right: 2rem;
+}

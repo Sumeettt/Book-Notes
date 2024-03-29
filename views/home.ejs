@@ -1,0 +1,35 @@
+<%- include("partials/header") %>
+    <div class="main">
+    <h1 class="my-name-text">Sumeet Parmar</h1>
+    <h1 class="read-text">Books I've read!</h1>
+    <hr/>
+    
+    <% for(let book of locals.booksList) { %>
+        <div class="each-book-container">
+            <img src="<%= book.book_cover_url %>" /> 
+            <div class="each-book-content-buttons-container">
+                <div>
+                    <h1 class="book-author-text"> <%= book.book_title %> by <%= book.book_author %> </h1>
+                    <p class="summary-text"> <%= book.book_summary %> </p>
+                </div>
+                <div class="edit-delete-buttons-container">   
+                    <form action="/editBook" method="post">
+                        <input type="hidden" name="editId" value= "<%= book.id %>" />
+                        <button type="submit">Edit</button>
+                    </form>
+                    <form action="/delete" method="post">
+                        <input type="hidden" name="deleteId" value= "<%= book.id %>" />
+                        <button type="submit" class="delete-button">Delete</button>
+                    </form>    
+                </div>  
+            </div>
+
+        </div>
+
+    <% } %>
+
+    <form action="/addBook" method="get" >
+        <button>Add Book</button>
+    </form>
+</div>
+<%- include("partials/footer") %>

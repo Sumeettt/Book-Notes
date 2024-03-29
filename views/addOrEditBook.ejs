@@ -1,0 +1,25 @@
+<%- include("partials/header") %>
+
+
+
+<a href="/" >
+    <i class="fa-solid fa-arrow-left  back-icon"></i>
+</a>
+
+<form action=<%= locals.action %> method="post" class="add-book-input">
+    <label for="title">Book Title:</label>
+    <input type="text" name="title"  id="title" placeholder="Title" value="<%= locals.bookTitle %>" required />
+    <label for="author">Author:</label>
+    <input type="text" name="author"  id="author" placeholder="Author" value="<%= locals.bookAuthor %>" required/>
+    <label for="summary">Book ISBN:</label>
+    <input type="text" name="isbn"  id="isbn" placeholder="ISBN" value="<%= locals.bookIsbn %>" required/>
+    <label for="summary">Summary:</label>
+    <textarea type="text" name="summary"  id="summary" required><%= locals.bookSummary %></textarea> 
+    <input type="hidden" name="id" value="<%= locals.bookId %>"/>
+    <button type="submit"><%= buttonText %></button>
+    
+</form>
+
+
+
+<%- include("partials/footer") %>
